@@ -7,19 +7,10 @@
 *
 */
 
-func reversed(lines: String) -> String {
-    if (lines.isEmpty) {
-        return("")
-    }
-    else {
-        return(lines)
-    }
-}
 print("Input what you want reversed: ")
-let usrinput = readLine()
-let transformed = (!usrinput)
+let usrinput = readLine()!
 var result = ""
-for i in transformed {
-        result += reversed(lines: transformed(i))
-    }
-print("reverse of ", transformed, " is ", result)
+for i in usrinput {
+    result = "\(i)" + result
+}
+print("inverted version of input is: ", result)
