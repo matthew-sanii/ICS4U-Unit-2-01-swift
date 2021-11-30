@@ -12,11 +12,14 @@ func reversed(lines: String) -> String {
         return("")
     }
     else {
-        return(reversed(lines: lines.prefix(1)) + lines.prefix(0))
+        return(lines)
     }
 }
 print("Input what you want reversed: ")
 let usrinput = readLine()
-let transformed = String(!usrinput)
-let answer = reversed(lines: transformed)
-print("reverse of ", usrinput, " is ", answer)
+let transformed = (!usrinput)
+var result = ""
+for i in transformed {
+        result += reversed(lines: transformed(i))
+    }
+print("reverse of ", transformed, " is ", result)
